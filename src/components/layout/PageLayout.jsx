@@ -1,4 +1,4 @@
-import style from "@/components/layout/pageLayout.module.css"
+import style from "@/components/layout/PageLayout.module.css"
 
 export const PageLayout = ({children}) => {
   return (

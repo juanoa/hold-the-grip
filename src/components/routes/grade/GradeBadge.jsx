@@ -1,5 +1,5 @@
 import { Badge } from 'theme-ui'
-import style from "@/components/routes/grade/gradeBadge.module.css";
+import style from "@/components/routes/grade/GradeBadge.module.css";
 export const GradeBadge = ({grade}) => {
 
   const getBadgeStyleFromGrade = (grade) => {

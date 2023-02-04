@@ -1,44 +1,16 @@
-import style from "@/styles/pages/routes/routePage.module.css";
-import {PageLayout} from "@/components/layout/pageLayout";
-import {Badge, Heading} from 'theme-ui'
-import {GradeBadge} from "@/components/routes/grade/gradeBadge";
+import {PageLayout} from "@/components/layout/PageLayout";
+import {TitleSection} from "@/components/pages/routes/route-page/TitleSection";
+import {InfoSection} from "@/components/pages/routes/route-page/InfoSection";
+import {TagsSecion} from "@/components/pages/routes/route-page/TagsSecion";
+import {LocationSection} from "@/components/pages/routes/route-page/LocationSection";
 
 const RoutePage = ({route}) => {
   return (
     <PageLayout>
-      <section className={style.titleSection}>
-        <div>
-          <span className={style.region}>{route.region}</span>
-          <div className={style.nameAndGrade}>
-            <Heading as="h1">{route.name}</Heading>
-            <GradeBadge grade={route.grade} />
-          </div>
-        </div>
-        <span>❤️</span>
-      </section>
-      <section className={style.infoSection}>
-        <div>
-          {
-            route.images.map((image, i) => <img src={image} width={"100%"} key={i}/>)
-          }
-        </div>
-        <div>
-          {route.description}
-        </div>
-      </section>
-      <section className={style.tagsSection}>
-        {
-          route.tags.map(tag => <span>{tag} </span>)
-        }
-      </section>
-      <section>
-        <h2>Location</h2>
-        <p>{route.location.lat}</p>
-        <p>{route.location.lon}</p>
-      </section>
-      <section>
-        <h2>Comments</h2>
-      </section>
+      <TitleSection route={route} />
+      <InfoSection route={route} />
+      <TagsSecion tags={route.tags} />
+      <LocationSection location={route.location} />
     </PageLayout>
   )
 }
