@@ -17,7 +17,7 @@ const RoutePage = ({route}) => {
 
 export async function getServerSideProps(context) {
   const {slug} = context.query;
-  const route = await fetch(`http://localhost:3000/api/routes/${slug}`).then(res => res.json())
+  const route = await fetch(`${process.env.API_HOST}/routes/${slug}`).then(res => res.json())
   return {
     props: {route},
   }
