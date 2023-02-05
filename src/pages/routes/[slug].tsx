@@ -3,8 +3,13 @@ import {TitleSection} from "@/components/pages/routes/route-page/TitleSection";
 import {InfoSection} from "@/components/pages/routes/route-page/InfoSection";
 import {TagsSection} from "@/components/pages/routes/route-page/TagsSection";
 import {LocationSection} from "@/components/pages/routes/route-page/LocationSection";
+import {Route} from "@/domain/routes/Route";
 
-const RoutePage = ({route}) => {
+interface Props {
+    route: Route
+}
+
+const RoutePage = ({route}: Props) => {
   return (
     <PageLayout>
       <TitleSection route={route} />

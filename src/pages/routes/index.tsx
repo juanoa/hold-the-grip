@@ -1,8 +1,12 @@
 import {PageLayout} from "@/components/layout/PageLayout";
 import Link from "next/link";
+import {Route} from "@/domain/routes/Route";
 
+interface Props {
+  routes: Array<Route>
+}
 
-const RoutePage = ({routes}) => {
+const RoutePage = ({routes}: Props) => {
   return (
     <PageLayout>
       {
