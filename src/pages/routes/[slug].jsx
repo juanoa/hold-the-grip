@@ -1,7 +1,7 @@
 import {PageLayout} from "@/components/layout/PageLayout";
 import {TitleSection} from "@/components/pages/routes/route-page/TitleSection";
 import {InfoSection} from "@/components/pages/routes/route-page/InfoSection";
-import {TagsSecion} from "@/components/pages/routes/route-page/TagsSecion";
+import {TagsSection} from "@/components/pages/routes/route-page/TagsSection";
 import {LocationSection} from "@/components/pages/routes/route-page/LocationSection";
 
 const RoutePage = ({route}) => {
@@ -9,7 +9,7 @@ const RoutePage = ({route}) => {
     <PageLayout>
       <TitleSection route={route} />
       <InfoSection route={route} />
-      <TagsSecion tags={route.tags} />
+      <TagsSection tags={route.tags} />
       <LocationSection location={route.location} />
     </PageLayout>
   )

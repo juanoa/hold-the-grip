@@ -1,7 +1,7 @@
 import style from "@/styles/pages/routes/RoutePage.module.css";
 import {Badge} from "theme-ui";
 
-export const TagsSecion = ({tags}) => {
+export const TagsSection = ({tags}) => {
   return (
     <section className={style.tagsSection}>
       {
