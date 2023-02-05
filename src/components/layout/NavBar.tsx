@@ -10,7 +10,7 @@ export const NavBar = () => {
             Hold The Grip
           </NavLink>
         </div>
-        <Link href="/routes">
+        <Link href="/index">
           Routes
         </Link>
       </Flex>
