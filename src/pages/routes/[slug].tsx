@@ -11,7 +11,7 @@ interface Props {
 
 const RoutePage = ({ route }: Props) => {
   return (
-    <PageLayout>
+    <PageLayout title={route.name}>
       <TitleSection route={route} />
       <InfoSection route={route} />
       <TagsSection tags={route.tags} />

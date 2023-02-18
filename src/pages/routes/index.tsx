@@ -8,7 +8,7 @@ interface Props {
 
 const RoutePage = ({ routes }: Props) => {
   return (
-    <PageLayout>
+    <PageLayout title="Routes">
       {routes.map((route) => (
         <div key={route.slug}>
           <Link href="/routes/[slug]" as={`/routes/${route.slug}`}>
