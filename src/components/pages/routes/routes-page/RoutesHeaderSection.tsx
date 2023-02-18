@@ -6,8 +6,8 @@ export const RoutesHeaderSection = () => {
   return (
     <section className={style.RoutesHeaderSection}>
       <h1>Routes</h1>
-      <Link href="/routes/create">
-        <Button variant="outline">Create</Button>
+      <Link href="/routes/upload">
+        <Button variant="outline">Upload</Button>
       </Link>
     </section>
   );
