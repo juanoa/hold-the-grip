@@ -1,14 +1,16 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import Link from "next/link";
 import { Route } from "@/domain/routes/Route";
+import { RoutesHeaderSection } from "@/components/pages/routes/routes-page/RoutesHeaderSection";
 
 interface Props {
   routes: Array<Route>;
 }
 
-const RoutePage = ({ routes }: Props) => {
+const RoutesPage = ({ routes }: Props) => {
   return (
     <PageLayout title="Routes">
+      <RoutesHeaderSection />
       {routes.map((route) => (
         <div key={route.slug}>
           <Link href="/routes/[slug]" as={`/routes/${route.slug}`}>
@@ -29,4 +31,4 @@ export async function getServerSideProps() {
   };
 }
 
-export default RoutePage;
+export default RoutesPage;

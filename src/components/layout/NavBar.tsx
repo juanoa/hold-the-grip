@@ -6,8 +6,8 @@ export const NavBar = () => {
   return (
     <nav className={style.navbar}>
       <div className={style.navbar_left}>
-        <Link href="/">
-          <NavLink className={style.navbar_logo}>Hold The Grip</NavLink>
+        <Link href="/" className={style.navbar_logo}>
+          Hold The Grip
         </Link>
         <Link href="/routes">Routes</Link>
       </div>
