@@ -1,11 +1,16 @@
 import { PageLayout } from "@/components/layout/PageLayout";
+import {
+  UploadRouteFormSection,
+  UploadRouteHeaderSection,
+} from "@/components/pages/routes/upload/upload-route-page";
 
-const CreateRoutePage = () => {
+const UploadRoutePage = () => {
   return (
     <PageLayout title="Upload new route">
-      <h1>Upload new route</h1>
+      <UploadRouteHeaderSection />
+      <UploadRouteFormSection />
     </PageLayout>
   );
 };
 
-export default CreateRoutePage;
+export default UploadRoutePage;
