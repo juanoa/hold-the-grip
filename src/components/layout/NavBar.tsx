@@ -1,22 +1,17 @@
-import {Box, Button, Flex, NavLink} from "theme-ui";
+import { Button, NavLink } from "theme-ui";
 import Link from "next/link";
+import style from "./NavBar.module.css";
 
 export const NavBar = () => {
   return (
-    <Flex as="nav" sx={{justifyContent: 'space-between', p: 3}}>
-      <Flex sx={{ alignItems: 'center' }}>
-        <div>
-          <NavLink sx={{ p: '2', display: 'flex', flexDirection: 'row', alignItems: 'center', fontSize: '2'}}>
-            Hold The Grip
-          </NavLink>
-        </div>
-        <Link href="/index">
-          Routes
+    <nav className={style.navbar}>
+      <div className={style.navbar_left}>
+        <Link href="/">
+          <NavLink className={style.navbar_logo}>Hold The Grip</NavLink>
         </Link>
-      </Flex>
-      <Box sx={{ display: 'flex', placeItems: 'center' }}>
-        <Button py={1}>Get Started</Button>
-      </Box>
-    </Flex>
-  )
-}
+        <Link href="/routes">Routes</Link>
+      </div>
+      <Button className={style.navbar_cta}>Get Started</Button>
+    </nav>
+  );
+};
