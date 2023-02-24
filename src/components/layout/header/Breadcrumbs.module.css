@@ -1,0 +1,17 @@
+.breadcrumbs {
+    display: flex;
+}
+
+.breadcrumbItem {
+    color: var(--color-secondary);
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.breadcrumbItem:not(:last-child)::after {
+    content: "/";
+}
+
+.breadcrumbItem:last-child {
+    font-weight: bold;
+}

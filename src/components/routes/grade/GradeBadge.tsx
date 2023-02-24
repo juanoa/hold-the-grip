@@ -1,9 +1,7 @@
-import { Badge } from 'theme-ui'
 import style from "@/components/routes/grade/GradeBadge.module.css";
-export const GradeBadge = ({grade}) => {
-
+export const GradeBadge = ({ grade }) => {
   const getBadgeStyleFromGrade = (grade) => {
-    const gradeNumber = parseInt(grade[0])
+    const gradeNumber = parseInt(grade[0]);
     if (gradeNumber < 6) {
       return style.easy;
     } else if (gradeNumber >= 6 && gradeNumber <= 8) {
@@ -12,11 +10,7 @@ export const GradeBadge = ({grade}) => {
       return style.hard;
     }
     return style.easy;
-  }
+  };
 
-  return (
-    <Badge className={getBadgeStyleFromGrade(grade)}>
-      {grade}
-    </Badge>
-  )
-}
+  return <div className={getBadgeStyleFromGrade(grade)}>{grade}</div>;
+};

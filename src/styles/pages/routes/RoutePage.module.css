@@ -6,7 +6,7 @@
 }
 
 .region {
-    color: var(--theme-ui-colors-secondary);
+    color: red;
 }
 
 .nameAndGrade {
@@ -24,7 +24,7 @@
 
 .tagsSection {
     padding: 4rem 0;
-    background-color: var(--theme-ui-colors-muted);
+    background-color: red;
 
     display: flex;
     justify-content: space-around;
