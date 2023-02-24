@@ -1,7 +1,7 @@
-import { PageLayout } from "@/components/layout/PageLayout";
+import { PageLayout } from "@/components/layout/page-layout/PageLayout";
 import Link from "next/link";
 import { Route } from "@/domain/routes/Route";
-import { RoutesHeaderSection } from "@/components/pages/routes/routes-page/RoutesHeaderSection";
+import { Button } from "@/components/UI/button/Button";
 
 interface Props {
   routes: Array<Route>;
@@ -9,8 +9,7 @@ interface Props {
 
 const RoutesPage = ({ routes }: Props) => {
   return (
-    <PageLayout title="Routes">
-      <RoutesHeaderSection />
+    <PageLayout title="Routes" headerComponent={<Button label="+" />}>
       {routes.map((route) => (
         <div key={route.slug}>
           <Link href="/routes/[slug]" as={`/routes/${route.slug}`}>

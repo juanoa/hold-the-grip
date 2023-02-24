@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+
+    background-color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar_link {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.navbar_logo {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-primary);
+}

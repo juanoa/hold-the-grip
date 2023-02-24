@@ -1,0 +1,15 @@
+.header {
+    padding: 40px 0;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: normal;
+    color: var(--color-primary);
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
